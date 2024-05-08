@@ -1,0 +1,120 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    overflow:hidden;
+}
+     /* start design of sidebar section topar and button  */
+
+.container{
+    background-color:#ddd;
+    height:100vh;
+}
+.sidebar{
+    position:fixed;
+    top:0;
+    left:0;
+    width:230px;
+    transition:0.5s;
+    height:100%;
+    background-color:rgb(148, 171, 186); 
+}
+.section{
+    width:calc(100% - 230px);
+    height:100%;
+    background-color:#fff;
+    margin-left:230px;
+}
+.topbar{
+    width:100%;
+    padding:23px;
+    background-color:rgb(255, 173, 173);
+}
+.toolbar button{
+    padding:10px 23px;
+}
+
+  /* End  of sidebar section topbar and button */
+
+   /* start of sidebar-menu */
+
+.sidebar-menu{
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding:15px;
+}
+.sidebar-menu button{
+    padding:8px 15px;
+    background-color:white;
+    border:none;
+}
+.content{
+    margin: 15px 0px 0px 35px;
+}
+ #signin{
+    display:none;
+ }
+ #registerBtn{
+    background-color:darkorange;
+    color:white;
+} 
+
+/*End of sidebar-menu  */
+
+
+ /* start form validation  */
+
+
+ .card{
+    width:350px;
+    box-shadow: 1px 0px 10px 1px #ddd;
+    padding:24px;
+    border:1px solid rgb(209, 209, 209);
+
+ }
+ form{
+    display: flex;
+    flex-direction: column;
+    gap:19px;
+ }
+ form input{
+   padding:8px;
+ }
+ form input:focus{
+    outline-color:darkorange;
+    
+ }
+ form button[type='submit']{
+    padding:8px 24px;
+    background-color: darkorange;
+    border:none;
+    color:white;
+    width:fit-content;
+ }
+
+#nameMessage,#emailMessage,#passwordMessage{
+    display:none;
+}
+.password-container{
+    background-color:red;
+    display:flex;
+    position: relative;
+}
+.password-container input{
+    width:100%;
+}
+
+.password-container button{
+    position:absolute;
+    top:7px;
+    right:12px;
+    width:25px;
+    height:25px;
+    border:none;
+    background-color:#ddd;
+    border-radius:50%;
+
+}
+
+

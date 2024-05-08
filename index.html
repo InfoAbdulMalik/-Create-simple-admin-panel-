@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+ <div class="container">
+ <div class="sidebar" id="sidebar">
+    <div class="sidebar-menu">
+  <button id="registerBtn" onclick="tab('registerBtn', 'signinBtn', 'register','signin' )">Register</button>
+  <button id="signinBtn" onclick="tab('signinBtn', 'registerBtn','signin' ,'register')">Signin</button>
+</div>
+ </div>
+ <div class="section" id="section">
+   <div class="topbar" id="topbar">
+    <div class="toolbar" id="toolbar">
+        <button onclick="toggle()">Toggle</button>
+    </div>
+   </div>
+  
+   <div class="content">
+       <div class="Register" id="register">
+        <h1>Register</h1>
+        <div class="card">
+
+          <form  name ='registerform' onsubmit="register(event)">
+            <input type="text" name="fullname" id='fullname' placeholder="Enter your fullname" oninput="inputValidation('fullname','nameMessage')">
+            <p id="nameMessage"></p>
+            <input type="email" name="email" id='email' placeholder="Enter your email" oninput="inputValidation('email','emailMessage')">
+            <p id="emailMessage"></p>
+
+            <div class="password-container">
+
+              <input type="password" name="password" id='password' placeholder="Enter your password" oninput="inputValidation('password','passwordMessage')">
+              <button type='button' onclick="togglePassword()"><i class='fa fa-eye-slash' id="toggleIcon"></i></button>
+            </div>
+            <p id="passwordMessage"></p>
+            <button type="submit">Register</button>
+          </form> 
+          
+        </div>
+    </div>
+    <div class="signin" id="signin">
+        <h1>Signin</h1>
+        <div class="card">
+
+          <form name="signinForm" onsubmit="a()">
+            <input type="text" name="email" placeholder="Enter your email">
+            <input type="text" name="password" placeholder="Enter your password">
+            <button type="submit">signin</button>
+          </form> 
+          
+        </div>
+    </div>
+
+   </div>
+   
+ </div>
+ </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
